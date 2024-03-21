@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+        .container {
+            border: 5px solid #121212;
+            margin: auto;
+            width: 50%;
+            justify-content: space-between;
+        }
+        .container:hover {
+    -webkit-animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+    animation: flip-vertical-left 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+}
+
+@-webkit-keyframes flip-vertical-left {
+    0% {
+        -webkit-transform: perspective(400px) rotateY(0);
+        transform: perspective(400px) rotateY(0);
+    }
+    50% {
+        -webkit-transform: perspective(400px) rotateY(-180deg);
+        transform: perspective(400px) rotateY(-180deg);
+    }
+    100% {
+        -webkit-transform: perspective(400px) rotateY(-180deg) scale3d(1, 1, 1);
+        transform: perspective(400px) rotateY(-180deg) scale3d(1, 1, 1);
+    }
+}
+
+@keyframes flip-vertical-left {
+    0% {
+        transform: perspective(400px) rotateY(0);
+    }
+    50% {
+        transform: perspective(400px) rotateY(-180deg);
+    }
+    100% {
+        transform: perspective(400px) rotateY(-180deg) scale3d(1, 1, 1);
+    }
+}
+
+
+    </style>
+    <div class="container   flip-vertical-left">
+        <form class="form-horizontal">
+            <fieldset>
+            
+            
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for=""></label>  
+              <div class="col-md-2">
+              <input id="" name="" type="text" placeholder="e-mail" class="form-control input-md">
+                
+              </div>
+            </div>
+            
+            <!-- Password input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="passwordinput"></label>
+              <div class="col-md-2">
+                <input id="passwordinput" name="passwordinput" type="password" placeholder="password" class="form-control input-md">
+                
+              </div>
+            </div>
+            
+            <!-- Button -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="singlebutton"></label>
+              <div class="col-md-4">
+                <button id="singlebutton" name="singlebutton" class="btn btn-primary">Button</button>
+              </div>
+            </div>
+            
+            </fieldset>
+            </form>
+    </div>
+</body>
+</html>
